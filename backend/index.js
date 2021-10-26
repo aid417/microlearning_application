@@ -4,7 +4,7 @@
 const express = require("express");
 const app = express();
 const port = 3003;
-
+const connection = require('./config/database'); 
 // MIDDLEWARE
 
 
@@ -19,7 +19,12 @@ const port = 3003;
 // ROUTES
 
 app.get("/", (req, res) =>{
-    res.send('index page')
+    let sql = "SELECT * FROM USERS";
+    connection.query(sql, function(err, results){
+        if (err) throw err;
+        res.send(results)
+    })
+    
 })
 
 // SQL
@@ -29,4 +34,8 @@ app.get("/", (req, res) =>{
 
 app.listen(port, () => {
     console.log('listening')
+    connection.connect(function(err){
+        if(err) throw err;
+        console.log('database connected');
+    })
 });
