@@ -1,7 +1,7 @@
 const express = require("express");
 
 const router = express.Router();
-
+const connection = require('../config/database');
 
 router.get('/', (req,res)=>{
     res.send('Welcome to Home Page');
@@ -10,4 +10,4 @@ router.get('/', (req,res)=>{
 
 
 
-export default router;
+module.exports = router;
