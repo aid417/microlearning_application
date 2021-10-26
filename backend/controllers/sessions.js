@@ -16,7 +16,7 @@ router.post("/", (req,res) => {
         if(password == results[0].password){
             req.session.currentUser = results[0]
             console.log('session started')
-            res.status(200).json({ results[0]})
+            res.status(200).json({ results})
         }else{
             res.status(400).json({ error: err.message });
         }
