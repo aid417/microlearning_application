@@ -18,7 +18,7 @@ router.get("/:user_name", (req,res) => {
                     res.status(400).json({error: err.message});
                 }
                 res.status(200).json({results});
-                console.log(results)
+                // console.log(results[0].user_id)
                 // if (err) throw err;
                 // res.send(results)
             });
