@@ -20,13 +20,6 @@ router.post("/", (req,res) => {
         }else{
             res.status(400).json({ error: err.message });
         }
-                // if (err){
-                //     res.status(400).json({error: err.message});
-                // }
-                // res.status(200).json({results});
-                // console.log(results)
-                // if (err) throw err;
-                // res.send(results)
             });
 });
 
