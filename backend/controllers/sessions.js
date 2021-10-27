@@ -9,10 +9,10 @@ const connection = require('../config/database');
 
 /********   CREATE   ************/
 router.post("/", (req,res) => {
-    user_name = req.body.user_name;
+    username = req.body.username;
     password = req.body.password;
     sql_query = 'SELECT * FROM USERS where user_name = ?';
-    connection.query(sql_query, user_id, function(err, results){
+    connection.query(sql_query, username, function(err, results){
         if(password == results[0].password){
             req.session.currentUser = results[0]
             console.log('session started')
