@@ -45,7 +45,7 @@ render(){
                     <label htmlFor="password">Password:</label>
                     <input type="text" id="password" name="password" placeholder = "password" onChange={this.handlePasswordChange}
             value={this.state.password}/>
-                    <input type="submit" value="Register"/>
+                    <input type="submit" value="Log In"/>
                 </form>
             </div>
     )

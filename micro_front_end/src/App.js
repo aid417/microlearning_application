@@ -2,18 +2,16 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Redirect } from "react-router";
 import axios from "axios";
+import UserHome from "./components/UserHome";
 import Login from "./components/Login";
 import NewUser from "./components/NewUser";
+import Home from "./components/Home";
+
+
+
 const baseURL = "http://localhost:3003";
 
 
-// function App() {
-//   return (
-//    <div>
-//      <h2>Hello World</h2>
-//    </div>
-//   );
-// }
 
 class App extends Component{
   constructor(props){
@@ -53,8 +51,10 @@ class App extends Component{
 
     return(
         <Router>
-
-        <h1>MICROLEARNING APPLICATION</h1>
+        
+        <h1>
+          <Link to="/Home">STUDY BUDDY </Link>
+          </h1>
           <nav>
             <Link to="/NewUser">Create Account</Link>
 
@@ -75,10 +75,24 @@ class App extends Component{
           )}/>
 
 
+          <Route path="/Home" exact component={Home} />
 
-          <Route path="/Login" render={props =>(
-            <Login {...props} handleLogin={this.handleLogin}/>
-          )}/>
+          {this.state.loggedIn ? (
+            <Redirect from="/Login" to="/UserHome" />
+
+          ): (
+            <Route path="/Login" render={props =>(
+              <Login {...props} handleLogin={this.handleLogin}/>
+            )}/>
+          )}
+          {this.state.loggedIn && (
+            <Route path="/UserHome" render={props => (
+              <UserHome {...props} userid={this.state.user_id}/>
+            )
+
+            }
+            />
+          )}
 
         </Router>
     )

@@ -25,7 +25,7 @@ app.use(
 
 const usersController = require("./controllers/users.js");
 const sessionsController = require("./controllers/sessions.js");
-
+const usercoursesController = require("./controllers/usercourses");
 
 
 // WHITELIST
@@ -51,6 +51,7 @@ app.use("/users", usersController);
 
 
 app.use("/sessions", sessionsController);
+app.use("/usercourses", usercoursesController);
 // CONTROLLERS
 
 // app.get("/", (req, res) =>{
