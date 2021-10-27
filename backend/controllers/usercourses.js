@@ -24,24 +24,26 @@ router.get("/:id", (req,res) => {
 });
 
 /********   CREATE   ************/
-// router.post("/", (req, res) => {
-//     console.log(req.body);
+router.post("/", (req, res) => {
 
-//     data = [req.body.first_name, req.body.last_name, req.body.username, req.body.password];
+    data = [req.body.course_id, req.body.user_id]
+    // console.log(req.body, 'body');
+
+    // data = [req.body.first_name, req.body.last_name, req.body.username, req.body.password];
    
-//     sql_query = 'INSERT INTO USERS (first_name, last_name, user_name,password) VALUES (?, ?, ?, ?);';
-//     connection.query(sql_query, data, function(err, results){
-//         if (err){
-//             res.status(400).json({error: err.message});
-//         }
-//         else{
-//             res.status(200).json({results});
-//             console.log(results)
-//         }
+    sql_query = 'INSERT INTO USERCLASSES (course_id, user_id) VALUES (?, ?);';
+    connection.query(sql_query, data, function(err, results){
+        if (err){
+            res.status(400).json({error: err.message});
+        }
+        else{
+            res.status(200).json({results});
+            console.log(results)
+        }
      
-//     });
+    });
 
-//   });
+  });
 
 /********   DELETE   ************/
 

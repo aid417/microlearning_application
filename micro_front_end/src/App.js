@@ -19,10 +19,12 @@ class App extends Component{
     this.state = {
       loggedIn: false,
       user_id: "",
-      navToggle: false
+      navToggle: false,
+      user_courses:[]
     };
     this.handleLogin = this.handleLogin.bind(this);
     this.handleLogOut = this.handleLogOut.bind(this);
+    // this.getCourses = this.getCourses.bind(this);
   }
 
   handleAddUser(user) {
@@ -42,11 +44,19 @@ class App extends Component{
   }
   async handleLogin(user){
     console.log(user.results[0])
+    const response = await axios.get(`${baseURL}/usercourses/${user.results[0]}`);
     this.setState({
       loggedIn: true,
-      user_id: user.results[0].user_id
+      user_id: user.results[0].user_id,
+      navToggle: false,
+      user_courses: response.data.results
     })
   }
+
+  // async getCourses(user){
+  //   const response = await axios.get(`${baseURL}/usercourses/${user}`);
+  //   console.log(response.data.results);
+  // }
   render() {
 
     return(
@@ -87,7 +97,7 @@ class App extends Component{
           )}
           {this.state.loggedIn && (
             <Route path="/UserHome" render={props => (
-              <UserHome {...props} userid={this.state.user_id}/>
+              <UserHome {...props} userid={this.state.user_id} courses={this.state.user_courses}/>
             )
 
             }
