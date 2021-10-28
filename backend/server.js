@@ -26,7 +26,7 @@ app.use(
 const usersController = require("./controllers/users.js");
 const sessionsController = require("./controllers/sessions.js");
 const usercoursesController = require("./controllers/usercourses");
-
+const modulesController = require("./controllers/modules");
 
 // WHITELIST
 // const whitelist = ["http://localhost:3000", "http://localhost:3003"];
@@ -52,6 +52,7 @@ app.use("/users", usersController);
 
 app.use("/sessions", sessionsController);
 app.use("/usercourses", usercoursesController);
+app.use("/modules", modulesController);
 // CONTROLLERS
 
 // app.get("/", (req, res) =>{
