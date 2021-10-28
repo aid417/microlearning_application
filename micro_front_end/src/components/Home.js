@@ -4,7 +4,7 @@ class Home extends Component {
     render() {
       return (
         <div>
-            <p>Study Buddy is a microlearning application.</p>
+            {/* <p>Study Buddy is a microlearning application.</p> */}
         </div>
       );
     }
