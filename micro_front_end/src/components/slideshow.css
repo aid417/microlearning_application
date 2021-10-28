@@ -1,12 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Raleway+Dots&family=Raleway:wght@300&family=Roboto:wght@100&family=Rubik:wght@300&display=swap");
+
 body {
   margin: 0;
 }
 
 .slider {
   position: relative;
-  height: 80vh;
-  border: 1px solid green;
+  /* height: 80vh; */
+  /* border: 1px solid green; */
   display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 0 auto;
+  align-items: center;
 }
 
 .slide {
@@ -22,4 +28,51 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#module-main {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: space-evenly;
+}
+
+#back {
+  padding: 0;
+  background: none;
+  width: 150px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid rgb(250, 100, 150);
+  border-radius: 5px;
+}
+#back > a {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(250, 100, 150);
+  font-family: "Raleway", sans-serif;
+}
+
+#back:hover {
+  background-color: rgb(250, 100, 150);
+}
+
+#back > a:hover {
+  color: white;
+}
+
+.arrow {
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 50px;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.arrow:hover {
+  color: pink;
+  cursor: pointer;
 }

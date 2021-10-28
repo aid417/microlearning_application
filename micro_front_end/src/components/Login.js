@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import '../main.css';
 const baseURL = "http://localhost:3003";
 
 class Login extends Component{
@@ -37,15 +38,15 @@ class Login extends Component{
 render(){
     return(
 
-        <div>
-                <form onSubmit={this.handleSubmit}>
+        <div id="login">
+                <form class="main-form" onSubmit={this.handleSubmit}>
                     
-                    <label htmlFor="username">User Name:</label>
+                    {/* <label htmlFor="username">user name:</label> */}
                     <input type="text" id="username" name="username" placeholder = "username" onChange={this.handleUserNameChange}     value={this.state.username}/>
-                    <label htmlFor="password">Password:</label>
+                    {/* <label htmlFor="password">password:</label> */}
                     <input type="text" id="password" name="password" placeholder = "password" onChange={this.handlePasswordChange}
             value={this.state.password}/>
-                    <input type="submit" value="Log In"/>
+                    <input id="login-button" type="submit" value="log in"/>
                 </form>
             </div>
     )

@@ -5,8 +5,9 @@ import axios from "axios";
 import Slideshow from "./Slideshow";
 import Card from "./beginnerspanish/flashcard";
 import UserHome from "./UserHome";
+import './user.css';
 // import defaultSlides from "./defaultSlides";
-
+import './slideshow.css';
 const baseURL = "http://localhost:3003";
 
 
@@ -32,9 +33,9 @@ async componentDidMount(){
 
     render(){
         return(
-            <div>
+            <div id="module-main">
     
-                <button onClick={this.props.handleBack}><Link to="/UserHome" >back</Link></button>
+                <button id="back" onClick={this.props.handleBack}><Link to="/UserHome" >back to home</Link></button>
 
                 <Slideshow slides={this.state.cards} />
             </div>

@@ -6,7 +6,7 @@ import UserHome from "./components/UserHome";
 import Login from "./components/Login";
 import NewUser from "./components/NewUser";
 import Home from "./components/Home";
-
+import './main.css';
 
 
 const baseURL = "http://localhost:3003";
@@ -61,20 +61,20 @@ class App extends Component{
 
     return(
         <Router>
-        
-        <h1>
-          <Link to="/Home">STUDY BUDDY </Link>
+        <div className="main-div">
+        <h1 id="home">
+          <Link to="/Home">S T U D Y  <span class="space">space</span>   B U D D Y </Link>
           </h1>
           <nav>
-            <Link to="/NewUser">Create Account</Link>
+            <Link to="/NewUser">create account</Link>
 
-            {!this.state.loggedIn && ( <Link to="/Login">Log In</Link>)}
+            {!this.state.loggedIn && ( <Link to="/Login">log in</Link>)}
             {this.state.loggedIn && (
                   <button
-                    
+                    id="logout"
                     onClick={this.handleLogOut}
                   >
-                    Log Out
+                    log out
                   </button>
                 )}
           </nav>
@@ -103,7 +103,7 @@ class App extends Component{
             }
             />
           )}
-
+        </div>
         </Router>
     )
   }

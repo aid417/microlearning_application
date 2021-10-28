@@ -1,18 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Raleway+Dots&family=Raleway:wght@300&family=Roboto:wght@100&family=Rubik:wght@300&display=swap");
+
 .flash-card {
-  font-size: 24px;
-  line-height: 72px;
-  width: 216px;
+  font-size: 40px;
+  line-height: 150px;
+
+  width: 500px;
   border: 1px solid black;
   margin: 18px;
-
+  text-align: center;
   cursor: pointer;
   user-select: none;
+  /* display: flex;
+  align-items: center; */
+  font-family: "Rubik", sans-serif;
 }
 
 .flash-card.front {
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(255, 196, 235);
+  color: white;
 }
 
 .flash-card.back {
-  background-color: rgb(232, 238, 209);
+  background-color: rgb(255, 228, 250);
+  color: rgb(250, 100, 150);
 }

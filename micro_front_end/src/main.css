@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Raleway+Dots&family=Raleway:wght@300&family=Roboto:wght@100&family=Rubik:wght@300&display=swap");
+#home {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#home > a {
+  font-family: "Monoton", cursive;
+  text-decoration: none;
+  font-size: 80px;
+  color: rgb(250, 100, 150);
+}
+
+#home > a:hover {
+  color: rgb(255, 196, 235);
+}
+/* font-family: "Rubik", sans-serif; */
+nav {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 75%;
+  margin: 0 auto;
+  font-family: "Raleway Dots", cursive;
+  /* font-family: "Roboto", sans-serif; */
+  /* background-color: rgb(133, 199, 242); */
+}
+nav > a {
+  text-decoration: none;
+  /* color: rgb(66, 76, 85); */
+  color: black;
+  /* color: rgb(255, 196, 235); */
+  font-size: 40px;
+  /* font-weight: bold; */
+}
+nav > a:hover {
+  /* color: rgb(255, 228, 250); */
+  color: rgb(250, 100, 150);
+}
+
+.main-form {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  height: 50%;
+  /* margin-top: 50px; */
+}
+
+#login {
+  border: 1px solid rgb(250, 100, 150);
+  border-radius: 25px;
+  width: 50%;
+  margin: 0 auto;
+  height: 300px;
+  margin-top: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  /* background-color: rgb(133, 199, 242); */
+}
+
+.space {
+  font-size: 10px;
+  color: white;
+}
+
+#login-button {
+  width: 50%;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid rgb(250, 100, 150);
+  border-radius: 5px;
+  color: grey;
+}
+#login-button:hover {
+  background-color: rgb(250, 100, 150);
+  color: white;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+#logout {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  font-family: "Raleway Dots", cursive;
+  color: black;
+  /* color: rgb(255, 196, 235); */
+  font-size: 40px;
+  /* font-weight: bold; */
+}
+#logout:hover {
+  color: rgb(250, 100, 150);
+}

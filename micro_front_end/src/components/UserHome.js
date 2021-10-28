@@ -5,6 +5,7 @@ import axios from "axios";
 // import Slideshow from "./beginnerspanish/slideshow";
 import Card from "./beginnerspanish/flashcard";
 import Module from "./Module";
+import './user.css';
 const baseURL = "http://localhost:3003";
 
 
@@ -93,11 +94,12 @@ class UserHome extends Component{
                      </div>
                 } */}
                 {this.state.courses.length > 0 && 
-                <div> 
-                    <h1>Your Courses:</h1>
+                <div class="user_home"> 
+                    
 
-                    <h2>Beginner Spanish:</h2>
+                    <h2 id="spanish">BEGINNER SPANISH</h2>
                     <table>
+                        <tbody>
                         <tr>
                             <th>module</th>
                             <th>cards</th>
@@ -105,29 +107,31 @@ class UserHome extends Component{
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><button id="1" onClick={this.handleModule}>cards</button></td>
+                            <td><button className="card-button" id="1" onClick={this.handleModule}>cards</button></td>
                             <td>quiz</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td><button id="2" onClick={this.handleModule}>cards</button></td>
+                            <td><button id="2" className="card-button" onClick={this.handleModule}>cards</button></td>
                             <td>quiz</td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td><button id="3" onClick={this.handleModule}>cards</button></td>
+                            <td><button id="3" className="card-button" onClick={this.handleModule}>cards</button></td>
                             <td>quiz</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td><button id="4" onClick={this.handleModule}>cards</button></td>
+                            <td><button id="4" className="card-button"  onClick={this.handleModule}>cards</button></td>
                             <td>quiz</td>
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td><button id="5" onClick={this.handleModule}>cards</button></td>
+                            <td><button id="5" className="card-button" onClick={this.handleModule}>cards</button></td>
                             <td>quiz</td>
                         </tr>
+                        </tbody>
+                       
                     </table>
 
                 </div>

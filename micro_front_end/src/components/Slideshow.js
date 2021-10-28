@@ -33,7 +33,7 @@ const Slideshow = ({slides}) =>{
     return(
 
         <section className="slider">
-            <button onClick={goToPrev}>Previous</button>
+            <button className="arrow" onClick={goToPrev}>&#8592;</button>
             {slides.map((s,i)=>(
                
                 <div className={i === curr ? "slide active" : "slide"} key={s.card_num}>
@@ -42,7 +42,7 @@ const Slideshow = ({slides}) =>{
                 </div>
               
             ))}
-            <button onClick={goToNext}>Next</button>
+            <button className="arrow" onClick={goToNext}>&#8594;</button>
         </section>
     )
 }
