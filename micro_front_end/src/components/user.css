@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Raleway+Dots&family=Raleway:wght@300&family=Roboto:wght@100&family=Rubik:wght@300&display=swap");
 
 #spanish {
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Raleway Dots", cursive;
   font-size: 50px;
   margin: 0 auto;
+  margin-top: 50px;
+  color: rgb(250, 100, 150);
   /* color: rgb(255, 196, 235); */
   font-weight: 400;
 }
@@ -12,35 +15,115 @@
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
-  height: 400px;
+  /* height: 400px; */
   justify-content: space-evenly;
 }
-
-.user_home > table {
-  border: 1px solid black;
-  border-collapse: collapse;
-  width: 50%;
+#module-container {
+  /* border: 1px solid black; */
+  height: 300px;
+  display: flex;
+  width: 80%;
   margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.module-div {
+  border: 2px solid grey;
+  border-style: dotted;
+  background-color: rgb(255, 196, 235);
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.module-div > h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 35px;
+  text-align: center;
+  color: rgb(255, 228, 250);
+  font-weight: bold;
+  /* border: 1px solid black; */
+}
+.module-div > div > p {
   font-family: "Rubik", sans-serif;
+  font-size: 25px;
 }
 
-tr {
-  border: 1px solid black;
+.module-div > div {
+  /* border: 1px solid purple; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
 }
-
-td {
-  border: 1px solid black;
-}
-
 .card-button {
   font-family: "Rubik", sans-serif;
   padding: 0;
   border: none;
   background: none;
-  font-size: 15px;
+  font-size: 25px;
   color: black;
 }
 .card-button:hover {
   cursor: pointer;
+  color: rgb(255, 228, 250);
+}
+
+.add-class {
+  border: 1px solid rgb(250, 100, 150);
+  border-radius: 25px;
+  width: 500px;
+  height: 250px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.add-h2 {
+  /* border: 1px solid purple; */
+  text-align: center;
+  font-family: "Raleway Dots", cursive;
+  font-weight: 400;
+  /* font-family: "Raleway", sans-serif; */
+  font-size: 40px;
+  color: rgb(250, 100, 150);
+  /* color: rgb(150, 250, 100); */
+  /* color: rgb(255, 196, 235); */
+}
+
+#checkbox-div {
+  /* border: 1px solid rgb(250, 100, 150); */
+  /* border-radius: 5px; */
+  /* border: 1px solid black; */
+  font-family: "Rubik", sans-serif;
+  font-size: 25px;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#add-submit {
+  width: 150px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid rgb(250, 100, 150);
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+#add-submit:hover {
+  cursor: pointer;
+  background-color: rgb(250, 100, 150);
   color: rgb(255, 196, 235);
+}
+
+#beginnerspanish:hover {
+  cursor: pointer;
 }

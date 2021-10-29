@@ -37,14 +37,13 @@ class UserHome extends Component{
     async handleSubmit(event){
         event.preventDefault();
   
-      
+        let courses = this.state.course_id;
         const response = await axios.post(`${baseURL}/usercourses`, {
             course_id: this.state.course_id,
            user_id : this.state.user_id
         })
 
-        this.setState({course_id:""});
-        console.log(response)
+        this.setState({course_id:"", courses: courses})
         // this.props.handleAddUser(response.data);
     }
     handleCourseChange(event) {
@@ -72,7 +71,7 @@ class UserHome extends Component{
         return(
             <Router>
                 <div>{this.state.courses.length == 0 &&
-                <p>You are not enrolled in any courses</p>
+                <h2 class="add-h2">ADD A COURSE:</h2>
                 
                 }
 
@@ -80,10 +79,11 @@ class UserHome extends Component{
 
                     <div>
                         {this.state.courses.length == 0 && 
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="beginnerspanish">Beginner Spanish:</label>
-                <input type="checkbox" id="beginnerspanish" name="Beginner Spanish" onChange={this.handleCourseChange} value="1"/>
-                <input type="submit" value="Submit"/>
+                <form class="add-class" onSubmit={this.handleSubmit}>
+                    <div id="checkbox-div">   <label htmlFor="beginnerspanish">beginner spanish:</label>
+                <input type="checkbox" id="beginnerspanish" name="Beginner Spanish" onChange={this.handleCourseChange} value="1"/></div>
+                 
+                <input id="add-submit" type="submit" value="add course"/>
                     </form>}
                 
                 {/* {this.state.courses.length > 0 && 
@@ -94,45 +94,36 @@ class UserHome extends Component{
                      </div>
                 } */}
                 {this.state.courses.length > 0 && 
-                <div class="user_home"> 
+                <div className="user_home"> 
                     
 
                     <h2 id="spanish">BEGINNER SPANISH</h2>
-                    <table>
-                        <tbody>
-                        <tr>
-                            <th>module</th>
-                            <th>cards</th>
-                            <th>quiz</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td><button className="card-button" id="1" onClick={this.handleModule}>cards</button></td>
-                            <td>quiz</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td><button id="2" className="card-button" onClick={this.handleModule}>cards</button></td>
-                            <td>quiz</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td><button id="3" className="card-button" onClick={this.handleModule}>cards</button></td>
-                            <td>quiz</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td><button id="4" className="card-button"  onClick={this.handleModule}>cards</button></td>
-                            <td>quiz</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td><button id="5" className="card-button" onClick={this.handleModule}>cards</button></td>
-                            <td>quiz</td>
-                        </tr>
-                        </tbody>
-                       
-                    </table>
+
+                    <div id="module-container">
+                        <div className="module-div">
+                            <h3>module 1</h3>
+                            <div> <button className="card-button" id="1" onClick={this.handleModule}>cards</button> <p>quiz</p> </div>
+                           
+                        </div>
+                        <div className="module-div">
+                            <h3>module 2</h3>
+                            <div> <button className="card-button" id="2" onClick={this.handleModule}>cards</button> <p>quiz</p> </div>
+                        </div>
+                        <div className="module-div">
+                            <h3>module 3</h3>
+                            <div> <button className="card-button" id="3" onClick={this.handleModule}>cards</button> <p>quiz</p> </div>
+                        </div>
+                        <div className="module-div">
+                            <h3>module 4</h3>
+                            <div> <button className="card-button" id="4" onClick={this.handleModule}>cards</button> <p>quiz</p> 
+                            </div>
+                        </div>
+                        <div className="module-div">
+                            <h3>module 5</h3>
+                            <div> <button className="card-button" id="5" onClick={this.handleModule}>cards</button> <p>quiz</p> </div>
+                        </div>
+                    </div>
+                    
 
                 </div>
                 
