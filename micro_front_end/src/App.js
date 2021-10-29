@@ -69,6 +69,10 @@ class App extends Component{
             <Link to="/NewUser">create account</Link>
 
             {!this.state.loggedIn && ( <Link to="/Login">log in</Link>)}
+
+            {!this.state.loggedIn && (
+              <Redirect from="/UserHome" to="/Home"/>
+            )}
             {this.state.loggedIn && (
                   <button
                     id="logout"

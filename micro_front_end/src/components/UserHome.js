@@ -102,25 +102,25 @@ class UserHome extends Component{
                     <div id="module-container">
                         <div className="module-div">
                             <h3>module 1</h3>
-                            <div> <button className="card-button" id="1" onClick={this.handleModule}>cards</button> <p>quiz</p> </div>
+                            <div> <button className="card-button" id="1" onClick={this.handleModule}>cards</button>  </div>
                            
                         </div>
                         <div className="module-div">
                             <h3>module 2</h3>
-                            <div> <button className="card-button" id="2" onClick={this.handleModule}>cards</button> <p>quiz</p> </div>
+                            <div> <button className="card-button" id="2" onClick={this.handleModule}>cards</button>  </div>
                         </div>
                         <div className="module-div">
                             <h3>module 3</h3>
-                            <div> <button className="card-button" id="3" onClick={this.handleModule}>cards</button> <p>quiz</p> </div>
+                            <div> <button className="card-button" id="3" onClick={this.handleModule}>cards</button>  </div>
                         </div>
                         <div className="module-div">
                             <h3>module 4</h3>
-                            <div> <button className="card-button" id="4" onClick={this.handleModule}>cards</button> <p>quiz</p> 
+                            <div> <button className="card-button" id="4" onClick={this.handleModule}>cards</button> 
                             </div>
                         </div>
                         <div className="module-div">
                             <h3>module 5</h3>
-                            <div> <button className="card-button" id="5" onClick={this.handleModule}>cards</button> <p>quiz</p> </div>
+                            <div> <button className="card-button" id="5" onClick={this.handleModule}>cards</button>  </div>
                         </div>
                     </div>
                     
