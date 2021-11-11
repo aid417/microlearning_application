@@ -43,11 +43,11 @@ class App extends Component{
     });
   }
   async handleLogin(user){
-    console.log(user.results[0])
-    const response = await axios.get(`${baseURL}/usercourses/${user.results[0]}`);
+    // console.log(user.user_results[0].user_id)
+    const response = await axios.get(`${baseURL}/usercourses/${user.user_results[0].user_id}`);
     this.setState({
       loggedIn: true,
-      user_id: user.results[0].user_id,
+      user_id: user.user_results[0].user_id,
       navToggle: false,
       user_courses: response.data.results
     })
