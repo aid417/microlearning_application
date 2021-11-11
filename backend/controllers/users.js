@@ -29,35 +29,17 @@ router.get("/:user_name", (req,res) => {
  
 
 /********   CREATE   ************/
-// router.post("/", (req, res) => {
-//     console.log(req.body);
 
-//     data = [req.body.first_name, req.body.last_name, req.body.username, req.body.password];
-   
-//     sql_query = 'INSERT INTO USERS (first_name, last_name, user_name,password) VALUES (?, ?, ?, ?);';
-//     connection.query(sql_query, data, function(err, results){
-//         if (err){
-//             res.status(400).json({error: err.message});
-//         }
-//         else{
-//             res.status(200).json({results});
-//             console.log(results)
-//         }
-     
-//     });
-
-//   });
 
 router.post("/", (req, res) => {
-    // exec('touch EncryptionServiceOutput.json');
+  
     console.log(req.body);
-    // const path = "./EncryptionServiceOutput.js";
+  
     let new_user = {
         "Command": "ENCRYPT",
         "Target": [req.body.password, "Password"]
     }
-    
-    // let continue_func = false;
+
    
         
     const check_data = async(data) => {
@@ -65,11 +47,7 @@ router.post("/", (req, res) => {
      console.log(new_data)
      writing()
      
-    //  console.log(new_data == new_user)
-    //     if(new_data == new_user){
-    //         console.log('hello')
-    //         writing()
-    //     }
+  
     }
     let check_file = async() =>{
         fs.readFile('./EncryptionServiceInput.json',  (err, data)=>{
@@ -85,11 +63,7 @@ router.post("/", (req, res) => {
             
         })}
     
-    
-    // const check_output = async(data) =>{
-    //     let new_data = await JSON.parse(data)
-    //     console.log(new_data, 'newewdata')
-    // }
+
     const reading_file = async() =>{
         await new Promise(resolve => setTimeout(resolve, 1000));
         fs.readFile('./EncryptionServiceOutput.json',  (err, data)=>{
@@ -98,10 +72,7 @@ router.post("/", (req, res) => {
                 console.log('error reading file from disk', err)
             }
             else{
-                // if(data){
-                //     console.log(JSON.parse(data), 'data')
-                //     check_output(data)
-                // }
+           
                 encrypted_pw = JSON.parse(data)
                 
                 data = [req.body.first_name, req.body.last_name, req.body.username, encrypted_pw['Target']];

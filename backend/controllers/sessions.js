@@ -11,7 +11,7 @@ const fs = require('fs')
 /********   CREATE   ************/
 router.post("/", (req,res) => {
     username = req.body.username;
-
+  console.log('sessions')
     password = req.body.password;
 let user_results = []
   const decrypt_function = async() => {
@@ -64,55 +64,7 @@ let user_results = []
         //     res.status(400).json({ error: err.message });
         // }
             });
-    // const decrypt_function = async() => {
-
-    // }
- 
-      
-      
-  // })
-    // }
-  //   let new_user = {
-  //     "Command": "DECRYPT",
-  //     "Target": [req.body.password, "Password"]
-  // }
- 
   
-//   exec('./EncryptionService')
-//   const read_output = async() =>{
-//       fs.readFile('./EncryptionServiceOutput.json',  (err, data)=>{
-
-//     if(err){
-//         console.log('error reading file from disk', err)
-//     }
-//     else{
-//        console.log(JSON.parse(data, 'sign in data'))
-//        return
-// }})
-//   }
-//   fs.readFile('./EncryptionServiceOutput.json',  (err, data)=>{
-
-//     if(err){
-//         console.log('error reading file from disk', err)
-//     }
-//     else{
-//         encrypted_pw = JSON.parse(data)
-//         console.log(encrypted_pw)
-//         // data = [req.body.first_name, req.body.last_name, req.body.username, encrypted_pw['Target']];
-//         //         console.log(data)
-//         //         sql_query = 'INSERT INTO USERS (first_name, last_name, user_name,password) VALUES (?, ?, ?, ?);';
-//         //         connection.query(sql_query, data, function(err, results){
-//         //             if (err){
-//         //                 res.status(400).json({error: err.message});
-//         //             }
-//         //             else{
-//         //                 res.status(200).json({results});
-//         //                 console.log(results)
-//         //             }
-                 
-//         //         });
-//        return
-// }})
  
 });
 
