@@ -96,7 +96,10 @@ class UserHome extends Component{
                 {this.state.courses.length > 0 && 
                 <div className="user_home"> 
                     
-
+                    <div id="edit-delete"> 
+                        <button>edit account</button>
+                        <button>delete account</button>
+                    </div>
                     <h2 id="spanish">BEGINNER SPANISH</h2>
 
                     <div id="module-container">

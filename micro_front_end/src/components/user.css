@@ -5,7 +5,7 @@
   font-family: "Raleway Dots", cursive;
   font-size: 50px;
   margin: 0 auto;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   color: rgb(250, 100, 150);
   /* color: rgb(255, 196, 235); */
   font-weight: 400;
@@ -126,5 +126,31 @@
 }
 
 #beginnerspanish:hover {
+  cursor: pointer;
+}
+
+#edit-delete {
+  margin: 0 auto;
+  margin-left: 80%;
+  /* border: 1px solid black; */
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100px;
+}
+
+#edit-delete > button {
+  height: 30px;
+  width: 120px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid rgb(250, 100, 150);
+  font-family: "Rubik", sans-serif;
+}
+
+#edit-delete > button:hover {
+  color: white;
+  background-color: rgb(250, 100, 150);
   cursor: pointer;
 }
