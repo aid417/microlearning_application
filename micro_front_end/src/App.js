@@ -24,7 +24,7 @@ class App extends Component{
     };
     this.handleLogin = this.handleLogin.bind(this);
     this.handleLogOut = this.handleLogOut.bind(this);
-    // this.getCourses = this.getCourses.bind(this);
+ 
   }
 
   handleAddUser(user) {
@@ -33,7 +33,7 @@ class App extends Component{
   async handleLogOut() {
     const response = await axios.delete(`${baseURL}/sessions`);
     console.log(response);
-    // localStorage.clear();
+
 
     this.setState({
      
@@ -43,7 +43,7 @@ class App extends Component{
     });
   }
   async handleLogin(user){
-    // console.log(user.user_results[0].user_id)
+
     const response = await axios.get(`${baseURL}/usercourses/${user.user_results[0].user_id}`);
     this.setState({
       loggedIn: true,
@@ -53,10 +53,6 @@ class App extends Component{
     })
   }
 
-  // async getCourses(user){
-  //   const response = await axios.get(`${baseURL}/usercourses/${user}`);
-  //   console.log(response.data.results);
-  // }
   render() {
 
     return(

@@ -12,19 +12,17 @@ const fs = require('fs')
 // })
 /********   GET   ************/
 router.get("/:user_name", (req,res) => {
-    f
     user_id = req.params.user_name;
     sql_query = 'SELECT * FROM USERS where user_name = ?;';
     connection.query(sql_query, user_id, function(err, results){
-                if (err){
+        if (err){
                     res.status(400).json({error: err.message});
-                }
-                else{
+        }
+        else{
                     res.status(200).json({results});
-                }
+            }
               
-             
-            });
+    });
 });
  
 
@@ -96,7 +94,7 @@ router.post("/", (req, res) => {
     const output = async() =>{
        console.log('output')
         await reading_file()
-    //    console.log(new_pw, 'new password')
+  
     }
   
     const writing = async()=> {
@@ -117,16 +115,11 @@ router.post("/", (req, res) => {
         })
     }
     const start_writing = async()=>{
-        // await exec('touch EncryptionServiceOutput.json')
         write_to_json()
        
     }
     start_writing();
-    // write_file().then(output())
-    // output()
-    
-
-
+  
    
    
 });

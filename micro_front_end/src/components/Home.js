@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import '../main.css';
 
 class Home extends Component {
     render() {
       return (
-        <div>
-            {/* <p>Study Buddy is a microlearning application.</p> */}
+        <div className="home-div-desc">
+            <p>Study Buddy is a microlearning flashcard application that helps you learn more, faster.</p>
         </div>
       );
     }

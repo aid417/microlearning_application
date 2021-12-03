@@ -97,3 +97,17 @@ nav > a:hover {
 #logout:hover {
   color: rgb(250, 100, 150);
 }
+
+.home-div-desc {
+  width: 85%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.home-div-desc > p {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  color: pink;
+  font-weight: bold;
+}
