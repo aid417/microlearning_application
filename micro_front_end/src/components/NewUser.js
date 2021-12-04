@@ -68,7 +68,7 @@ class NewUser extends Component{
                         {/* <label htmlFor="username">User Name:</label> */}
                         <input type="text" id="username" name="username" placeholder = "username" onChange={this.handleUserNameChange}     value={this.state.username}/>
                         {/* <label htmlFor="password">Password:</label> */}
-                        <input type="text" id="password" name="password" placeholder = "password" onChange={this.handlePasswordChange}
+                        <input type="password" id="password" name="password" placeholder = "password" onChange={this.handlePasswordChange}
                 value={this.state.password}/>
                          <input id="login-button" type="submit" value="register"/>
                     </form>
